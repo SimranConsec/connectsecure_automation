@@ -39,7 +39,7 @@ jobs:
         uses: browser-actions/setup-firefox@latest
 
       - name: Build the Project
-        run: mvn clean install -DskipTests
+        run: mvn clean test
 
       - name: Upload target folder
         uses: actions/upload-artifact@v2
