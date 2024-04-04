@@ -1,0 +1,115 @@
+# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+
+name: Java CI with Maven
+
+on:
+  pull_request:
+    branches:
+      - main
+      - issue-*
+  push:
+    branches:
+      - main
+      - issue-*
+
+jobs:
+  build_and_test:
+    name: Build and Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout Git repository
+        uses: actions/checkout@v2
+
+      - name: Install Java and Maven
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+          cache: maven
+
+      - name: Start Selenium Grid 4
+        run: docker compose -f  ${{ github.workspace }}/docker-compose-v3-seleniumgrid.yml up --scale chrome=4 -d
+
+      - name: Install Chrome
+        uses: browser-actions/setup-chrome@latest
+
+      - name: Install Firefox
+        uses: browser-actions/setup-firefox@latest
+
+      - name: Build the Project
+        run: mvn clean install -DskipTests
+
+      - name: Upload target folder
+        uses: actions/upload-artifact@v2
+        with:
+          name: target
+          path: |
+            ${{ github.workspace }}/target
+            ${{ github.workspace }}/reports
+
+  code_analysis:
+    name: Code Analysis
+    needs:
+      - build_and_test
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout Git repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+
+      - name: Install Java and Maven
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+          cache: maven
+
+      - name: Install Chrome
+        uses: browser-actions/setup-chrome@latest
+
+      - name: Install Firefox
+        uses: browser-actions/setup-firefox@latest
+
+      - name: Cache SonarCloud packages
+        uses: actions/cache@v2
+        with:
+          path: ~/.sonar/cache
+          key: ${{ runner.os }}-sonar
+          restore-keys: ${{ runner.os }}-sonar
+
+      - name: Cache Maven packages
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+
+      - name: Download target folder
+        uses: actions/download-artifact@v2
+        with:
+          name: target
+
+      - name: Sonar Code Analysis
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_KEY: ${{ secrets.SONAR_KEY }}
+          LMT_ACCESS: ${{ secrets.LMT_ACCESS }}
+          LMT_USER: ${{ secrets.LMT_USER }}
+        run: |
+          mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
+            -Dsonar.projectKey=$SONAR_KEY -Dheadless=true -DLT_USERNAME=$LMT_USER -DLT_ACCESS_KEY=$LMT_ACCESS
+
+      - name: Test Report
+        uses: dorny/test-reporter@v1
+        if: success() || failure()
+        with:
+          name: Test Results
+          path: ${{ github.workspace }}/target/surefire-reports/TEST-TestSuite.xml
+          reporter: java-junit
+          java-version: 17
