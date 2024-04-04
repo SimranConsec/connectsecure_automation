@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-tests" class="navigator-link">
+              <span class="suite-name border-failed">tests</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-tests" class="navigator-link ">
+                    <span>testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-tests" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-tests" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-tests" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-tests" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-tests" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-tests" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">26 methods, 3 failed,   23 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-tests" class="hide-methods failed suite-tests"> (hide)</a> <!-- hide-methods failed suite-tests -->
+                      <a href="#" panel-name="suite-tests" class="show-methods failed suite-tests"> (show)</a> <!-- show-methods failed suite-tests -->
+                    </span>
+                    <div class="method-list-content failed suite-tests">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tests" title="com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage" class="method navigator-link" hash-for-method="testAddBackupSoftwareSetting">testAddBackupSoftwareSetting</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tests" title="com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage" class="method navigator-link" hash-for-method="testAddSoftwareToExcludeAndRemove">testAddSoftwareToExcludeAndRemove</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tests" title="com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage" class="method navigator-link" hash-for-method="testPortsPolicySetting">testPortsPolicySetting</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-tests -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-tests" class="hide-methods passed suite-tests"> (hide)</a> <!-- hide-methods passed suite-tests -->
+                      <a href="#" panel-name="suite-tests" class="show-methods passed suite-tests"> (show)</a> <!-- show-methods passed suite-tests -->
+                    </span>
+                    <div class="method-list-content passed suite-tests">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tests" title="com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage" class="method navigator-link" hash-for-method="testAddEdrApplicationSetting">testAddEdrApplicationSetting</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tests" title="com.connectsecure.test.ui.connectsecure.TestTagRulePage" class="method navigator-link" hash-for-method="testAddTagRule">testAddTagRule</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tests" title="com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage" class="method navigator-link" hash-for-method="testBackupExcludeSetting">testBackupExcludeSetting</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tests" title="com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage" class="method navigator-link" hash-for-method="testComplianceScanSettings">testComplianceScanSettings</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tests" title="com.connectsecure.test.ui.connectsecure.TestCreateCompanyPage" class="method navigator-link" hash-for-method="testCreateCompany">testCreateCompany</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tests" title="com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage" class="method navigator-link" hash-for-method="testCustomDateFormatSetting">testCustomDateFormatSetting</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tests" title="com.connectsecure.test.ui.connectsecure.TestDeleteCompanyPage" class="method navigator-link" hash-for-method="testDeleteCompany">testDeleteCompany</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tests" title="com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage" class="method navigator-link" hash-for-method="testDepricationDaysSetting">testDepricationDaysSetting</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tests" title="com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage" class="method navigator-link" hash-for-method="testEdrExcludeSetting">testEdrExcludeSetting</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tests" title="com.connectsecure.test.ui.connectsecure.TestGenralSettingsPage" class="method navigator-link" hash-for-method="testGenralSetting">testGenralSetting</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tests" title="com.connectsecure.test.ui.connectsecure.TestDeleteCompanyPage" class="method navigator-link" hash-for-method="testLogIn">testLogIn</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tests" title="com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage" class="method navigator-link" hash-for-method="testLogIn">testLogIn</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tests" title="com.connectsecure.test.ui.connectsecure.TestTagRulePage" class="method navigator-link" hash-for-method="testLogIn">testLogIn</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tests" title="com.connectsecure.test.ui.connectsecure.TestCreateCompanyPage" class="method navigator-link" hash-for-method="testLogIn">testLogIn</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tests" title="com.connectsecure.test.ui.connectsecure.TestLogInPage" class="method navigator-link" hash-for-method="testLogIn">testLogIn</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tests" title="com.connectsecure.test.ui.connectsecure.TestGenralSettingsPage" class="method navigator-link" hash-for-method="testLogIn">testLogIn</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tests" title="com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage" class="method navigator-link" hash-for-method="testLwAgentScanSetting">testLwAgentScanSetting</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tests" title="com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage" class="method navigator-link" hash-for-method="testSessionTimeoutSetting">testSessionTimeoutSetting</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tests" title="com.connectsecure.test.ui.connectsecure.TestTagRulePage" class="method navigator-link" hash-for-method="testTagActionDelete">testTagActionDelete</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tests" title="com.connectsecure.test.ui.connectsecure.TestTagRulePage" class="method navigator-link" hash-for-method="testTagActionEdit">testTagActionEdit</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tests" title="com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage" class="method navigator-link" hash-for-method="testTimezoneSetting">testTimezoneSetting</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tests" title="com.connectsecure.test.ui.connectsecure.TestGenralSettingsPage" class="method navigator-link" hash-for-method="testToggleToDarkTheme">testToggleToDarkTheme</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tests" title="com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage" class="method navigator-link" hash-for-method="testWhiteLabelSetting">testWhiteLabelSetting</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-tests -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-tests" class="panel tests">
+          <div class="suite-tests-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddBackupSoftwareSetting">
+                  </a> <!-- testAddBackupSoftwareSetting -->
+                  <span class="method-name">testAddBackupSoftwareSetting</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@name=&apos;globalSearch&apos;]&quot;}
+  (Session info: chrome=123.0.6312.105)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.7.3&apos;, java.version: &apos;22&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [54f4bcd398f27ed7e22e0d6ddd46541e, findElement {using=xpath, value=//input[@name=&apos;globalSearch&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.105, chrome: {chromedriverVersion: 123.0.6312.58 (6b4b19e9dfbb..., userDataDir: /var/folders/1t/7s5nfm7n50d...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58962/devtoo..., se:cdpVersion: 123.0.6312.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 54f4bcd398f27ed7e22e0d6ddd46541e
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.isEnabled(Unknown Source)
+	at com.base.utils.WebDriverFactory.sendKeys(WebDriverFactory.java:189)
+	at com.base.helper.ui.connectsecure.GlobalSettingHelper.enterSoftwareNameToAddInExclude(GlobalSettingHelper.java:474)
+	at com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage.testAddBackupSoftwareSetting(TestGlobalSettingsPage.java:173)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+... Removed 13 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddSoftwareToExcludeAndRemove">
+                  </a> <!-- testAddSoftwareToExcludeAndRemove -->
+                  <span class="method-name">testAddSoftwareToExcludeAndRemove</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@name=&apos;globalSearch&apos;]&quot;}
+  (Session info: chrome=123.0.6312.105)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.7.3&apos;, java.version: &apos;22&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [54f4bcd398f27ed7e22e0d6ddd46541e, findElement {using=xpath, value=//input[@name=&apos;globalSearch&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.105, chrome: {chromedriverVersion: 123.0.6312.58 (6b4b19e9dfbb..., userDataDir: /var/folders/1t/7s5nfm7n50d...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58962/devtoo..., se:cdpVersion: 123.0.6312.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 54f4bcd398f27ed7e22e0d6ddd46541e
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.isEnabled(Unknown Source)
+	at com.base.utils.WebDriverFactory.sendKeys(WebDriverFactory.java:189)
+	at com.base.helper.ui.connectsecure.GlobalSettingHelper.enterSoftwareNameToAddInExclude(GlobalSettingHelper.java:474)
+	at com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage.testAddSoftwareToExcludeAndRemove(TestGlobalSettingsPage.java:196)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+... Removed 13 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPortsPolicySetting">
+                  </a> <!-- testPortsPolicySetting -->
+                  <span class="method-name">testPortsPolicySetting</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(text(),&apos;cancel&apos;)]&quot;}
+  (Session info: chrome=123.0.6312.105)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.7.3&apos;, java.version: &apos;22&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [54f4bcd398f27ed7e22e0d6ddd46541e, findElement {using=xpath, value=//*[contains(text(),&apos;cancel&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.105, chrome: {chromedriverVersion: 123.0.6312.58 (6b4b19e9dfbb..., userDataDir: /var/folders/1t/7s5nfm7n50d...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58962/devtoo..., se:cdpVersion: 123.0.6312.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 54f4bcd398f27ed7e22e0d6ddd46541e
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.isEnabled(Unknown Source)
+	at com.base.utils.WebDriverFactory.clickWebElement(WebDriverFactory.java:150)
+	at com.base.helper.ui.connectsecure.GlobalSettingHelper.enterInsecurePortsId(GlobalSettingHelper.java:146)
+	at com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage.testPortsPolicySetting(TestGlobalSettingsPage.java:103)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+... Removed 13 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-tests-class-failed -->
+          <div class="suite-tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddEdrApplicationSetting">
+                  </a> <!-- testAddEdrApplicationSetting -->
+                  <span class="method-name">testAddEdrApplicationSetting</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testBackupExcludeSetting">
+                  </a> <!-- testBackupExcludeSetting -->
+                  <span class="method-name">testBackupExcludeSetting</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testComplianceScanSettings">
+                  </a> <!-- testComplianceScanSettings -->
+                  <span class="method-name">testComplianceScanSettings</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCustomDateFormatSetting">
+                  </a> <!-- testCustomDateFormatSetting -->
+                  <span class="method-name">testCustomDateFormatSetting</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDepricationDaysSetting">
+                  </a> <!-- testDepricationDaysSetting -->
+                  <span class="method-name">testDepricationDaysSetting</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testEdrExcludeSetting">
+                  </a> <!-- testEdrExcludeSetting -->
+                  <span class="method-name">testEdrExcludeSetting</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLogIn">
+                  </a> <!-- testLogIn -->
+                  <span class="method-name">testLogIn</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLwAgentScanSetting">
+                  </a> <!-- testLwAgentScanSetting -->
+                  <span class="method-name">testLwAgentScanSetting</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSessionTimeoutSetting">
+                  </a> <!-- testSessionTimeoutSetting -->
+                  <span class="method-name">testSessionTimeoutSetting</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testTimezoneSetting">
+                  </a> <!-- testTimezoneSetting -->
+                  <span class="method-name">testTimezoneSetting</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWhiteLabelSetting">
+                  </a> <!-- testWhiteLabelSetting -->
+                  <span class="method-name">testWhiteLabelSetting</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-tests-class-passed -->
+          <div class="suite-tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.connectsecure.test.ui.connectsecure.TestTagRulePage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddTagRule">
+                  </a> <!-- testAddTagRule -->
+                  <span class="method-name">testAddTagRule</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLogIn">
+                  </a> <!-- testLogIn -->
+                  <span class="method-name">testLogIn</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testTagActionDelete">
+                  </a> <!-- testTagActionDelete -->
+                  <span class="method-name">testTagActionDelete</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testTagActionEdit">
+                  </a> <!-- testTagActionEdit -->
+                  <span class="method-name">testTagActionEdit</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-tests-class-passed -->
+          <div class="suite-tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.connectsecure.test.ui.connectsecure.TestGenralSettingsPage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGenralSetting">
+                  </a> <!-- testGenralSetting -->
+                  <span class="method-name">testGenralSetting</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLogIn">
+                  </a> <!-- testLogIn -->
+                  <span class="method-name">testLogIn</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testToggleToDarkTheme">
+                  </a> <!-- testToggleToDarkTheme -->
+                  <span class="method-name">testToggleToDarkTheme</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-tests-class-passed -->
+          <div class="suite-tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.connectsecure.test.ui.connectsecure.TestCreateCompanyPage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateCompany">
+                  </a> <!-- testCreateCompany -->
+                  <span class="method-name">testCreateCompany</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLogIn">
+                  </a> <!-- testLogIn -->
+                  <span class="method-name">testLogIn</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-tests-class-passed -->
+          <div class="suite-tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.connectsecure.test.ui.connectsecure.TestDeleteCompanyPage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDeleteCompany">
+                  </a> <!-- testDeleteCompany -->
+                  <span class="method-name">testDeleteCompany</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLogIn">
+                  </a> <!-- testLogIn -->
+                  <span class="method-name">testLogIn</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-tests-class-passed -->
+          <div class="suite-tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.connectsecure.test.ui.connectsecure.TestLogInPage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLogIn">
+                  </a> <!-- testLogIn -->
+                  <span class="method-name">testLogIn</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-tests-class-passed -->
+        </div> <!-- panel tests -->
+        <div panel-name="test-xml-tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">/Users/apple/Documents/workspace/testng-automation-framework-main/testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite thread-count=&quot;1&quot; parallel=&quot;instances&quot; name=&quot;tests&quot; allow-return-values=&quot;true&quot; verbose=&quot;0&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.base.utils.listeners.TestNgListeners&quot;/&gt;
+    &lt;listener class-name=&quot;com.base.utils.reporting.ExtentReporterNG&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;1&quot; parallel=&quot;instances&quot; name=&quot;ReqRes Test Suit&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.connectsecure.test.ui.connectsecure.TestLogInPage&quot;/&gt;
+      &lt;class name=&quot;com.connectsecure.test.ui.connectsecure.TestGenralSettingsPage&quot;/&gt;
+      &lt;class name=&quot;com.connectsecure.test.ui.connectsecure.TestCreateCompanyPage&quot;/&gt;
+      &lt;class name=&quot;com.connectsecure.test.ui.connectsecure.TestDeleteCompanyPage&quot;/&gt;
+      &lt;class name=&quot;com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage&quot;/&gt;
+      &lt;class name=&quot;com.connectsecure.test.ui.connectsecure.TestTagRulePage&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- ReqRes Test Suit --&gt;
+&lt;/suite&gt; &lt;!-- tests --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for tests</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">ReqRes Test Suit (6 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for tests</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for tests</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_tests');
+function tableData_tests() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(26);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'testLogIn')
+data.setCell(0, 2, 'com.connectsecure.test.ui.connectsecure.TestLogInPage')
+data.setCell(0, 3, 29436);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testLogIn')
+data.setCell(1, 2, 'com.connectsecure.test.ui.connectsecure.TestCreateCompanyPage')
+data.setCell(1, 3, 28438);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testLogIn')
+data.setCell(2, 2, 'com.connectsecure.test.ui.connectsecure.TestGenralSettingsPage')
+data.setCell(2, 3, 28270);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testLogIn')
+data.setCell(3, 2, 'com.connectsecure.test.ui.connectsecure.TestDeleteCompanyPage')
+data.setCell(3, 3, 28163);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testLogIn')
+data.setCell(4, 2, 'com.connectsecure.test.ui.connectsecure.TestTagRulePage')
+data.setCell(4, 3, 27895);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testLogIn')
+data.setCell(5, 2, 'com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage')
+data.setCell(5, 3, 27694);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testPortsPolicySetting')
+data.setCell(6, 2, 'com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage')
+data.setCell(6, 3, 25231);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'testEdrExcludeSetting')
+data.setCell(7, 2, 'com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage')
+data.setCell(7, 3, 22724);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'testAddTagRule')
+data.setCell(8, 2, 'com.connectsecure.test.ui.connectsecure.TestTagRulePage')
+data.setCell(8, 3, 22632);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'testTagActionEdit')
+data.setCell(9, 2, 'com.connectsecure.test.ui.connectsecure.TestTagRulePage')
+data.setCell(9, 3, 20311);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'testBackupExcludeSetting')
+data.setCell(10, 2, 'com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage')
+data.setCell(10, 3, 16646);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'testCreateCompany')
+data.setCell(11, 2, 'com.connectsecure.test.ui.connectsecure.TestCreateCompanyPage')
+data.setCell(11, 3, 16057);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'testAddBackupSoftwareSetting')
+data.setCell(12, 2, 'com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage')
+data.setCell(12, 3, 14332);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'testAddEdrApplicationSetting')
+data.setCell(13, 2, 'com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage')
+data.setCell(13, 3, 14244);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'testDepricationDaysSetting')
+data.setCell(14, 2, 'com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage')
+data.setCell(14, 3, 12785);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'testWhiteLabelSetting')
+data.setCell(15, 2, 'com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage')
+data.setCell(15, 3, 12631);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'testComplianceScanSettings')
+data.setCell(16, 2, 'com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage')
+data.setCell(16, 3, 11964);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'testDeleteCompany')
+data.setCell(17, 2, 'com.connectsecure.test.ui.connectsecure.TestDeleteCompanyPage')
+data.setCell(17, 3, 11687);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'testLwAgentScanSetting')
+data.setCell(18, 2, 'com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage')
+data.setCell(18, 3, 9689);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'testTagActionDelete')
+data.setCell(19, 2, 'com.connectsecure.test.ui.connectsecure.TestTagRulePage')
+data.setCell(19, 3, 9649);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'testSessionTimeoutSetting')
+data.setCell(20, 2, 'com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage')
+data.setCell(20, 3, 9522);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'testTimezoneSetting')
+data.setCell(21, 2, 'com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage')
+data.setCell(21, 3, 7875);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'testCustomDateFormatSetting')
+data.setCell(22, 2, 'com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage')
+data.setCell(22, 3, 7058);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'testGenralSetting')
+data.setCell(23, 2, 'com.connectsecure.test.ui.connectsecure.TestGenralSettingsPage')
+data.setCell(23, 3, 4283);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'testToggleToDarkTheme')
+data.setCell(24, 2, 'com.connectsecure.test.ui.connectsecure.TestGenralSettingsPage')
+data.setCell(24, 3, 2137);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'testAddSoftwareToExcludeAndRemove')
+data.setCell(25, 2, 'com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage')
+data.setCell(25, 3, 1552);
+window.suiteTableData['tests']= { tableData: data, tableDiv: 'times-div-tests'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 7 minutes</span>
+              <div id="times-div-tests">
+              </div> <!-- times-div-tests -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for tests</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.connectsecure.test.ui.connectsecure.TestLogInPage</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testLogIn</span>
+                <span class="method-start">9797 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">39240 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.connectsecure.test.ui.connectsecure.TestCreateCompanyPage</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">39650 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testLogIn</span>
+                <span class="method-start">45362 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">73802 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testCreateCompany</span>
+                <span class="method-start">77066 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">93123 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.connectsecure.test.ui.connectsecure.TestDeleteCompanyPage</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">93457 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testLogIn</span>
+                <span class="method-start">99246 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">127411 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testDeleteCompany</span>
+                <span class="method-start">131791 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">143479 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.connectsecure.test.ui.connectsecure.TestGenralSettingsPage</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">143902 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testLogIn</span>
+                <span class="method-start">149743 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">178015 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testGenralSetting</span>
+                <span class="method-start">179294 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">183580 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testToggleToDarkTheme</span>
+                <span class="method-start">187108 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">189247 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">189625 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testLogIn</span>
+                <span class="method-start">195651 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">223346 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testTimezoneSetting</span>
+                <span class="method-start">226363 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">234239 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testCustomDateFormatSetting</span>
+                <span class="method-start">237104 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">244165 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSessionTimeoutSetting</span>
+                <span class="method-start">246970 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">256493 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testPortsPolicySetting</span>
+                <span class="method-start">260440 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">285685 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testDepricationDaysSetting</span>
+                <span class="method-start">288396 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">301183 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testWhiteLabelSetting</span>
+                <span class="method-start">303155 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">315787 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testAddEdrApplicationSetting</span>
+                <span class="method-start">319709 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">333958 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testEdrExcludeSetting</span>
+                <span class="method-start">336198 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">358923 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testComplianceScanSettings</span>
+                <span class="method-start">363121 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">375086 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testAddBackupSoftwareSetting</span>
+                <span class="method-start">377572 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">391906 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testBackupExcludeSetting</span>
+                <span class="method-start">395853 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">412500 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testAddSoftwareToExcludeAndRemove</span>
+                <span class="method-start">415323 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">416878 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testLwAgentScanSetting</span>
+                <span class="method-start">420584 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">430274 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.connectsecure.test.ui.connectsecure.TestTagRulePage</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">430903 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testLogIn</span>
+                <span class="method-start">436730 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">464626 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testAddTagRule</span>
+                <span class="method-start">467434 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">490068 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testTagActionDelete</span>
+                <span class="method-start">493379 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">503029 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testTagActionEdit</span>
+                <span class="method-start">505441 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">525754 ms</span>
+              </div> <!-- configuration-class after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

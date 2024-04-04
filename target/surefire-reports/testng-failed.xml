@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="instances" name="Failed suite [tests]" allow-return-values="true" verbose="0">
+  <listeners>
+    <listener class-name="com.base.utils.listeners.TestNgListeners"/>
+    <listener class-name="com.base.utils.reporting.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="1" parallel="instances" name="ReqRes Test Suit(failed)" verbose="0">
+    <classes>
+      <class name="com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage">
+        <methods>
+          <include name="testAddSoftwareToExcludeAndRemove"/>
+          <include name="afterMethod"/>
+          <include name="testAddBackupSoftwareSetting"/>
+          <include name="beforeMethod"/>
+          <include name="testPortsPolicySetting"/>
+        </methods>
+      </class> <!-- com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage -->
+    </classes>
+  </test> <!-- ReqRes Test Suit(failed) -->
+</suite> <!-- Failed suite [tests] -->
