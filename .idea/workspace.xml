@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="04b2bab8-42ab-4546-af16-839da0e559c6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/drivers/chromedriver.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/base/helper/ui/connectsecure/CreateNewUserHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/base/helper/ui/connectsecure/CreateNewUserHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/connectsecure/test/ui/connectsecure/TestLogInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/connectsecure/test/ui/connectsecure/TestLogInPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/connectsecure/test/ui/connectsecure/TestTagRulePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/connectsecure/test/ui/connectsecure/TestTagRulePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/base/helper/ui/connectsecure/CreateNewUserHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/base/helper/ui/connectsecure/CreateNewUserHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/maven.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/connectsecure/test/ui/connectsecure/TestLogInPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/connectsecure/test/ui/connectsecure/TestLogInPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/connectsecure/test/ui/connectsecure/TestTagRulePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/connectsecure/test/ui/connectsecure/TestTagRulePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2edwn5NJJXt8mOCD6GrpyWWYXa9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.TestLogInPage.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/apple/Documents/workspace/connectsecure_automation"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="connectsecure_automation" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="connectsecure_automation" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestLogInPage" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="automation-with-tdd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.connectsecure.test.ui.connectsecure.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.connectsecure.test.ui.connectsecure" />
+      <option name="MAIN_CLASS_NAME" value="com.connectsecure.test.ui.connectsecure.TestLogInPage" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.TestLogInPage" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="04b2bab8-42ab-4546-af16-839da0e559c6" name="Changes" comment="" />
+      <created>1712247926752</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712247926752</updated>
+    </task>
+    <servers />
+  </component>
+</project>
