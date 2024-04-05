@@ -49,11 +49,7 @@ public abstract class WebDriverFactory {
         if (getDriver() == null) {
           ChromeOptions options = new ChromeOptions();
           options.addArguments("--headless");
-          options.setBinary(path + "/drivers/chromedriver"); 
-          options.addArguments("--disable-dev-shm-usage");
-          options.addArguments("--ignore-ssl-errors=yes");
-          options.addArguments("--ignore-certificate-errors");
-          setDriver(new ChromeDriver());
+          setDriver(new ChromeDriver(options));
         }
         break;
       case "FIREFOX":
