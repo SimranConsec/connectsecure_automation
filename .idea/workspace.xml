@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04b2bab8-42ab-4546-af16-839da0e559c6" name="Changes" comment="new changes made">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/base/helper/ui/connectsecure/DeleteCompanyHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/base/helper/ui/connectsecure/DeleteCompanyHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/base/helper/ui/connectsecure/GenralSettingHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/base/helper/ui/connectsecure/GeneralSettingHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/base/helper/ui/connectsecure/GlobalSettingHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/base/helper/ui/connectsecure/GlobalSettingHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/connectsecure/test/ui/connectsecure/TestDeleteCompanyPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/connectsecure/test/ui/connectsecure/TestDeleteCompanyPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/connectsecure/test/ui/connectsecure/TestGenralSettingsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/connectsecure/test/ui/connectsecure/TestGenralSettingsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/connectsecure/test/ui/connectsecure/TestGlobalSettingsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/connectsecure/test/ui/connectsecure/TestGlobalSettingsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/config/qaconfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config/qaconfig.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/base/helper/ui/connectsecure/DeleteCompanyHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/base/helper/ui/connectsecure/DeleteCompanyHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/base/helper/ui/connectsecure/GenralSettingHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/base/helper/ui/connectsecure/GlobalSettingHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/base/helper/ui/connectsecure/GlobalSettingHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/connectsecure/test/ui/connectsecure/TestDeleteCompanyPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/connectsecure/test/ui/connectsecure/TestDeleteCompanyPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/connectsecure/test/ui/connectsecure/TestGenralSettingsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/connectsecure/test/ui/connectsecure/TestGenralSettingsPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/connectsecure/test/ui/connectsecure/TestGlobalSettingsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/connectsecure/test/ui/connectsecure/TestGlobalSettingsPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/config/qaconfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/config/qaconfig.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
-    </list>
+    <list default="true" id="04b2bab8-42ab-4546-af16-839da0e559c6" name="Changes" comment="new changes made" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
