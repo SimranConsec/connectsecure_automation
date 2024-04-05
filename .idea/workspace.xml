@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04b2bab8-42ab-4546-af16-839da0e559c6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/drivers/chromedriver.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/base/helper/ui/connectsecure/CreateNewUserHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/base/helper/ui/connectsecure/CreateNewUserHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/connectsecure/test/ui/connectsecure/TestLogInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/connectsecure/test/ui/connectsecure/TestLogInPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/connectsecure/test/ui/connectsecure/TestTagRulePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/connectsecure/test/ui/connectsecure/TestTagRulePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/base/helper/ui/connectsecure/CreateNewUserHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/base/helper/ui/connectsecure/CreateNewUserHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/maven.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/connectsecure/test/ui/connectsecure/TestLogInPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/connectsecure/test/ui/connectsecure/TestLogInPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/connectsecure/test/ui/connectsecure/TestTagRulePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/connectsecure/test/ui/connectsecure/TestTagRulePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
+    <list default="true" id="04b2bab8-42ab-4546-af16-839da0e559c6" name="Changes" comment="new changes made">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +14,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "SimranConsec"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="6ee84251-25d6-4b28-bae7-e28591cc7f72" />
+        <option name="url" value="https://github.com/SimranConsec/connectsecure_automation.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -91,6 +97,19 @@
       <option name="presentableId" value="Default" />
       <updated>1712247926752</updated>
     </task>
+    <task id="LOCAL-00001" summary="new changes made">
+      <option name="closed" value="true" />
+      <created>1712290869263</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712290869263</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="new changes made" />
+    <option name="LAST_COMMIT_MESSAGE" value="new changes made" />
   </component>
 </project>
