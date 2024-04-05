@@ -90,6 +90,6 @@ public class TestTagRulePage {
     TimeUnit.SECONDS.sleep(5);
     tagRuleHelper.clickOnTagActionEditButton(tagIndex1);
     tagRuleHelper.enterUpdateForTagRule(updateName);
-    LogPrinter.printLog("Tag action edit executed successfully.");
+    LogPrinter.printLog("Tag action editted executed successfully.");
   }
 }

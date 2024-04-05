@@ -41,7 +41,7 @@ public class TestLogInPage {
     loginPageHelper.clickOnNextButton();
     loginPageHelper.enterPassword(password);
     loginPageHelper.clickOnNext();
-    TimeUnit.SECONDS.sleep(5);
+    TimeUnit.SECONDS.sleep(10);
     Assert.assertTrue(loginPageHelper.isConsecureLogoDisplayed());
     LogPrinter.printLog("Logo is displayed.");
     LogPrinter.printLog("Logged in to the application successfully.");

@@ -202,6 +202,7 @@ public class CreateNewUserHelper {
   }
 
   public void clickOnButtonYesToConfirm() {
+
     WebDriverFactory.clickWebElement(btnYes);
   }
 }
