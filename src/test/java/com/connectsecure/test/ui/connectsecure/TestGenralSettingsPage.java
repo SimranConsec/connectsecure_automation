@@ -1,5 +1,6 @@
 package com.connectsecure.test.ui.connectsecure;
 
+import com.base.utils.Utilities;
 import java.util.concurrent.TimeUnit;
 
 import org.testng.Assert;
@@ -8,18 +9,13 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.base.helper.ui.connectsecure.LoginPageHelper;
-import com.base.helper.ui.connectsecure.GenralSettingHelper;
+import com.base.helper.ui.connectsecure.GeneralSettingHelper;
 import com.base.utils.LogPrinter;
 import com.base.utils.WebDriverFactory;
 
 public class TestGenralSettingsPage {
   LoginPageHelper loginPageHelper;
-  GenralSettingHelper genralSettingHelper;
-
-  String tenantName = "ccnstest";
-  String loginName = "venu@ccnstest.com";
-  String password = "Hash@1234";
-  String launguage = "English";
+  GeneralSettingHelper generalSettingHelper;
 
   @BeforeMethod
   public void beforeMethod() {
@@ -28,7 +24,7 @@ public class TestGenralSettingsPage {
     WebDriverFactory.waitForPageToLoad(30);
 
     loginPageHelper = new LoginPageHelper();
-    genralSettingHelper = new GenralSettingHelper();
+    generalSettingHelper = new GeneralSettingHelper();
   }
 
   @AfterClass
@@ -38,6 +34,9 @@ public class TestGenralSettingsPage {
 
   @Test(priority = 6, enabled = true)
   public void testLogIn() throws InterruptedException {
+    String tenantName = Utilities.getEnvironmentProperties("tenantName");
+    String loginName = Utilities.getEnvironmentProperties("loginName");
+    String password = Utilities.getEnvironmentProperties("password");
     loginPageHelper.enterTenantName(tenantName);
     loginPageHelper.clickOnSignIn();
     TimeUnit.SECONDS.sleep(5);
@@ -51,15 +50,16 @@ public class TestGenralSettingsPage {
   }
 
   @Test(priority = 7, enabled = true)
-  public void testGenralSetting() {
-    genralSettingHelper.clickOnLaungaugeImage();
-    genralSettingHelper.clickOnLaunguageAsPreffered(launguage);
-    LogPrinter.printLog("Language changed successfully.");
+  public void testGeneralSetting() {
+    String launguage = Utilities.getEnvironmentProperties("launguage");
+    generalSettingHelper.clickOnLaungaugeImage();
+    generalSettingHelper.clickOnLaunguageAsPreffered(launguage);
+    LogPrinter.printLog("Launguage changed successfully.");
   }
 
   @Test(priority = 8, enabled = true)
   public void testToggleToDarkTheme() {
-    genralSettingHelper.clickOnToggleButtonForDarkMode();
+    generalSettingHelper.clickOnToggleButtonForDarkMode();
     LogPrinter.printLog("Toggled to dark-mode.");
   }
 }

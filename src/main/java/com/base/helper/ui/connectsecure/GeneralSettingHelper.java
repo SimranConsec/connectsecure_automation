@@ -7,19 +7,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class GenralSettingHelper {
+public class GeneralSettingHelper {
 
   /**
    * Constructor.
    */
-  public GenralSettingHelper() {
+  public GeneralSettingHelper() {
     PageFactory.initElements(WebDriverFactory.getDriver(), this);
   }
 
   /**
-   * Test genral setting on dashboard level.
-   * 
-   * @author apple
+   * Test general setting on dashboard level.
    */
 
   @FindBy(xpath = "//languages/button/span[@class='mat-mdc-button-touch-target']")

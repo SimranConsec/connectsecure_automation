@@ -2,10 +2,12 @@ package com.base.helper.ui.connectsecure;
 
 import com.base.utils.WebDriverFactory;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class DeleteCompanyHelper {
 
@@ -18,12 +20,10 @@ public class DeleteCompanyHelper {
 
   /**
    * Test delete company.
-   * 
-   * @author apple
    */
 
   @FindBy(xpath = "//span[contains(text(),'Companies')]")
-  private WebElement lblcompanies;
+  private WebElement lblCompanies;
 
   @FindBy(xpath = "//span[contains(text(),'Delete Companies')]")
   private WebElement optDeleteCompanies;
@@ -32,7 +32,7 @@ public class DeleteCompanyHelper {
   private WebElement clickOnSelectCompany;
 
   @FindBy(xpath = "//input[@placeholder='Select Company']")
-  private WebElement txtboxsearchcompany;
+  private WebElement txtboxSearchCompany;
 
   @FindBy(xpath = "//button[@id='saveButton']")
   private WebElement btnDelete;
@@ -40,25 +40,25 @@ public class DeleteCompanyHelper {
   @FindBy(xpath = "//button[2]/span[2][@class='mdc-button__label'][contains(text(),'Delete')]")
   private WebElement btnConfirmDelete;
 
-  public void clickOnlabelCompany() {
-    WebDriverFactory.clickWebElement(lblcompanies);
+  public void clickOnLabelCompany() {
+    WebDriverFactory.clickWebElement(lblCompanies);
   }
 
   public void clickOnDeleteCompanies() {
     WebDriverFactory.clickWebElement(optDeleteCompanies);
   }
 
-  public void clickOnSelectCompanytoDelete() {
+  public void clickOnSelectCompanyToDelete() {
     WebDriverFactory.clickWebElement(clickOnSelectCompany);
   }
 
-  public void enterCompanyNameToDelete(String nameOfCompany) {
-    WebDriverFactory.sendKeys(txtboxsearchcompany, nameOfCompany, 5);
+  public void enterCompanyNameToDelete(String deleteCompany) {
+    WebDriverFactory.sendKeys(txtboxSearchCompany, deleteCompany, 5);
   }
 
-  public void clickOnSearchedCompany(String nameOfCompany) {
+  public void clickOnSearchedCompany(String deleteCompany) {
     WebDriverFactory.getDriver()
-        .findElement(By.xpath("//span[contains(text(),'" + nameOfCompany + "')]")).click();
+        .findElement(By.xpath("//span[contains(text(),'" + deleteCompany + "')]")).click();
   }
 
   public void clickOnDeleteButton() {
@@ -68,4 +68,17 @@ public class DeleteCompanyHelper {
   public void clickOnDeleteButtonToConfirm() {
     WebDriverFactory.clickWebElement(btnConfirmDelete, 10);
   }
+
+  /**
+   * For checking that company deleted or not.
+   */
+
+  /*public void getPopUpMessage() {
+    if (popup.isDisplayed()) {
+      // Handle the popup or assert its content
+      System.out.println("Popup appeared.");
+    } else {
+      System.out.println("Popup did not appear.");
+    }
+  }*/
 }

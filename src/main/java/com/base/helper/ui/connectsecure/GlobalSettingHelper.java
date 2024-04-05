@@ -438,7 +438,7 @@ public class GlobalSettingHelper {
   @FindBy(xpath = "//input[@name='exSearch']")
   private WebElement txtboxSerachForExcludingSoftware;
 
-  public void clickOnLinkBackupsoftwareSetting() {
+  public void clickOnLinkBackupSoftwareSetting() {
     WebDriverFactory.clickWebElement(lblBackipsoftware);
   }
 

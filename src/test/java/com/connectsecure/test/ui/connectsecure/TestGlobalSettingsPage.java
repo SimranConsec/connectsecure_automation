@@ -1,5 +1,6 @@
 package com.connectsecure.test.ui.connectsecure;
 
+import com.base.utils.Utilities;
 import java.util.concurrent.TimeUnit;
 
 import org.testng.Assert;
@@ -15,30 +16,6 @@ import com.base.utils.WebDriverFactory;
 public class TestGlobalSettingsPage {
   LoginPageHelper loginPageHelper;
   GlobalSettingHelper globalSettingHelper;
-
-  String tenantName = "ccnstest";
-  String loginName = "venu@ccnstest.com";
-  String password = "Hash@1234";
-  String timeZoneIndex = "284";
-  String index = "1";
-  String idleFor = "60";
-  String waitFor = "60";
-  String updateAssetDepDays = "15";
-  String updateAgentDepDays = "15";
-  String updateSuppressDays = "90";
-  String updatedTitle = "ConnectSecure :: Security and Vulnerability Manager";
-  String updatedFooter = "ConnectSecure";
-  String edrName = "hp wolf security";
-  String year = "2024";
-  String manufacture = "Bangalore";
-  String description = "It is a Software Company";
-  String insecureId = "8080";
-  String deniedId = "443";
-  String excludedId = "8080";
-  String allowedId = "443";
-  String complianceTypes = "NIST 800 53";
-  String softwareName = "Veritas NetBackup";
-  String timeIndex = "1";
 
   @BeforeMethod
   public void beforeMethod() {
@@ -57,6 +34,9 @@ public class TestGlobalSettingsPage {
 
   @Test(priority = 9, enabled = true)
   public void testLogIn() throws InterruptedException {
+    String tenantName = Utilities.getEnvironmentProperties("tenantName");
+    String loginName = Utilities.getEnvironmentProperties("loginName");
+    String password = Utilities.getEnvironmentProperties("password");
     loginPageHelper.enterTenantName(tenantName);
     loginPageHelper.clickOnSignIn();
     TimeUnit.SECONDS.sleep(5);
@@ -71,6 +51,7 @@ public class TestGlobalSettingsPage {
 
   @Test(priority = 10, enabled = true)
   public void testTimezoneSetting() {
+    String timeZoneIndex = Utilities.getEnvironmentProperties("timeZoneIndex");
     globalSettingHelper.clickOnGlobalSettingLabel();
     globalSettingHelper.clickOnLinkTimeZoneSetting();
     globalSettingHelper.clickOnSelectBarTimezone();
@@ -80,6 +61,7 @@ public class TestGlobalSettingsPage {
 
   @Test(priority = 11, enabled = true)
   public void testCustomDateFormatSetting() {
+    String index = Utilities.getEnvironmentProperties("index");
     globalSettingHelper.clickOnGlobalSettingLabel();
     globalSettingHelper.clickOnLinkDateFormatSetting();
     globalSettingHelper.clickOnSelectDateFormatBar();
@@ -89,15 +71,21 @@ public class TestGlobalSettingsPage {
 
   @Test(priority = 12, enabled = true)
   public void testSessionTimeoutSetting() {
+    String idleFor = Utilities.getEnvironmentProperties("idleFor");
+    String waitFor = Utilities.getEnvironmentProperties("waitFor");
     globalSettingHelper.clickOnGlobalSettingLabel();
     globalSettingHelper.clickOnLinkSessionTimeoutSetting();
     globalSettingHelper.enterIdleForTimeLimit(idleFor);
     globalSettingHelper.enterWaitforTimeLimit(waitFor);
-    LogPrinter.printLog("Seesion timeout is updated.");
+    LogPrinter.printLog("Session timeout is updated.");
   }
 
   @Test(priority = 13, enabled = true)
   public void testPortsPolicySetting() {
+    String insecureId = Utilities.getEnvironmentProperties("insecureId");
+    String deniedId = Utilities.getEnvironmentProperties("deniedId");
+    String excludedId = Utilities.getEnvironmentProperties("excludedId");
+    String allowedId = Utilities.getEnvironmentProperties("allowedId");
     globalSettingHelper.clickOnGlobalSettingLabel();
     globalSettingHelper.clickOnLinkPortsPolicySetting();
     globalSettingHelper.enterInsecurePortsId(insecureId);
@@ -108,17 +96,22 @@ public class TestGlobalSettingsPage {
   }
 
   @Test(priority = 14, enabled = true)
-  public void testDepricationDaysSetting() {
+  public void testDeprecationDaysSetting() {
+    String updateAssetDepDays = Utilities.getEnvironmentProperties("updateAssetDepDays");
+    String updateAgentDepDays = Utilities.getEnvironmentProperties("updateAgentDepDays");
+    String updateSuppressDays = Utilities.getEnvironmentProperties("updateSuppressDays");
     globalSettingHelper.clickOnGlobalSettingLabel();
     globalSettingHelper.clickOnLinkDeprecationDaysSetting();
     globalSettingHelper.enterAssetDeprecationDays(updateAssetDepDays);
     globalSettingHelper.enterAgentDeprecationDays(updateAgentDepDays);
     globalSettingHelper.enterMicrosoftSuppressDays(updateSuppressDays);
-    LogPrinter.printLog("Deprication days are updated,");
+    LogPrinter.printLog("Deprecation days are updated,");
   }
 
   @Test(priority = 15, enabled = true)
   public void testWhiteLabelSetting() {
+    String updatedTitle=Utilities.getEnvironmentProperties("updatedTitle");
+    String updatedFooter =Utilities.getEnvironmentProperties("updatedFooter");
     globalSettingHelper.clickOnGlobalSettingLabel();
     globalSettingHelper.clickOnLinkWhiteLabelSetting();
     globalSettingHelper.clickButtonEdittoUpdate();
@@ -133,6 +126,10 @@ public class TestGlobalSettingsPage {
 
   @Test(priority = 16, enabled = true)
   public void testAddEdrApplicationSetting() {
+    String edrName = Utilities.getEnvironmentProperties("edrName");
+    String year = Utilities.getEnvironmentProperties("year");
+    String manufacture = Utilities.getEnvironmentProperties("manufacture");
+    String description = Utilities.getEnvironmentProperties("description");
     globalSettingHelper.clickOnGlobalSettingLabel();
     globalSettingHelper.clickOnEdrApplicationLabelSetting();
     globalSettingHelper.clickAddEdrApplicationButton();
@@ -146,6 +143,7 @@ public class TestGlobalSettingsPage {
 
   @Test(priority = 17, enabled = true)
   public void testEdrExcludeSetting() {
+    String edrName=Utilities.getEnvironmentProperties("edrName");
     globalSettingHelper.clickOnGlobalSettingLabel();
     globalSettingHelper.clickOnEdrApplicationLabelSetting();
     globalSettingHelper.enterNameToSearch(edrName);
@@ -157,6 +155,7 @@ public class TestGlobalSettingsPage {
 
   @Test(priority = 18, enabled = true)
   public void testComplianceScanSettings() throws InterruptedException {
+    String complianceTypes = Utilities.getEnvironmentProperties("complianceTypes");
     globalSettingHelper.clickOnGlobalSettingLabel();
     globalSettingHelper.clickOnLinkComplianceScan();
     TimeUnit.SECONDS.sleep(5);
@@ -164,35 +163,26 @@ public class TestGlobalSettingsPage {
     LogPrinter.printLog("All Settings done successfully.");
   }
 
-  @Test(priority = 19, enabled = true)
-  public void testAddBackupSoftwareSetting() throws InterruptedException {
-    globalSettingHelper.clickOnGlobalSettingLabel();
-    globalSettingHelper.clickOnLinkBackupsoftwareSetting();
-    globalSettingHelper.clickAddBackupSoftwareButton();
-    TimeUnit.SECONDS.sleep(5);
-    globalSettingHelper.enterSoftwareNameToAddInExclude(softwareName);
-    globalSettingHelper.enterYearOfSoftwareRelease(year);
-    globalSettingHelper.enterSoftwareManufactureBy(manufacture);
-    globalSettingHelper.enterSoftwareDescription(description);
-    globalSettingHelper.clickSaveBackupButton();
-    LogPrinter.printLog("Backup software is addded successfully.");
-  }
-
   @Test(priority = 20, enabled = true)
   public void testBackupExcludeSetting() {
+    String softwareName =Utilities.getEnvironmentProperties("softwareName");
+    String year =Utilities.getEnvironmentProperties("year");
+    String manufacture =Utilities.getEnvironmentProperties("manufacture");
+    String description =Utilities.getEnvironmentProperties("description");
     globalSettingHelper.clickOnGlobalSettingLabel();
-    globalSettingHelper.clickOnLinkBackupsoftwareSetting();
+    globalSettingHelper.clickOnLinkBackupSoftwareSetting();
     globalSettingHelper.clickAddBackupSoftwareButton();
     globalSettingHelper.enterNameOfTheBackupApplication(softwareName);
     globalSettingHelper.enterYearOfSoftwareRelease(year);
     globalSettingHelper.enterSoftwareManufactureBy(manufacture);
     globalSettingHelper.enterSoftwareDescription(description);
     globalSettingHelper.clickSaveBackupButton();
-    LogPrinter.printLog("Backup spftware is added successfully.");
+    LogPrinter.printLog("Backup software is added successfully.");
   }
 
   @Test(priority = 21, enabled = true)
   public void testAddSoftwareToExcludeAndRemove() {
+    String softwareName = Utilities.getEnvironmentProperties("softwareName");
     globalSettingHelper.enterSoftwareNameToAddInExclude(softwareName);
     globalSettingHelper.enterNameToRemoveExcludeSoftware(softwareName);
     LogPrinter.printLog("Backup applications settings are updated.");
@@ -200,10 +190,11 @@ public class TestGlobalSettingsPage {
 
   @Test(priority = 22, enabled = true)
   public void testLwAgentScanSetting() {
+    String timeLwIndex = Utilities.getEnvironmentProperties("timeLwIndex");
     globalSettingHelper.clickOnGlobalSettingLabel();
     globalSettingHelper.clickOnLinkAgentScan();
     globalSettingHelper.clickOnBoxSetTimeInterval();
-    globalSettingHelper.selectTimeIntervalAsPreffered(timeIndex);
+    globalSettingHelper.selectTimeIntervalAsPreffered(timeLwIndex);
     globalSettingHelper.clickOnSetFromTimeBox();
   }
 }

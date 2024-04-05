@@ -6,6 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="04b2bab8-42ab-4546-af16-839da0e559c6" name="Changes" comment="new changes made">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/base/helper/ui/connectsecure/DeleteCompanyHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/base/helper/ui/connectsecure/DeleteCompanyHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/base/helper/ui/connectsecure/GenralSettingHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/base/helper/ui/connectsecure/GeneralSettingHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/base/helper/ui/connectsecure/GlobalSettingHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/base/helper/ui/connectsecure/GlobalSettingHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/connectsecure/test/ui/connectsecure/TestDeleteCompanyPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/connectsecure/test/ui/connectsecure/TestDeleteCompanyPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/connectsecure/test/ui/connectsecure/TestGenralSettingsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/connectsecure/test/ui/connectsecure/TestGenralSettingsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/connectsecure/test/ui/connectsecure/TestGlobalSettingsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/connectsecure/test/ui/connectsecure/TestGlobalSettingsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config/qaconfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config/qaconfig.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/base/helper/ui/connectsecure/DeleteCompanyHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/base/helper/ui/connectsecure/DeleteCompanyHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/base/helper/ui/connectsecure/GenralSettingHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/base/helper/ui/connectsecure/GlobalSettingHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/base/helper/ui/connectsecure/GlobalSettingHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/connectsecure/test/ui/connectsecure/TestDeleteCompanyPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/connectsecure/test/ui/connectsecure/TestDeleteCompanyPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/connectsecure/test/ui/connectsecure/TestGenralSettingsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/connectsecure/test/ui/connectsecure/TestGenralSettingsPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/connectsecure/test/ui/connectsecure/TestGlobalSettingsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/connectsecure/test/ui/connectsecure/TestGlobalSettingsPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/config/qaconfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/config/qaconfig.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,15 +58,46 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "JUnit.All in automation-with-tdd (1).executor": "Run",
+    "JUnit.All in automation-with-tdd (2).executor": "Run",
+    "JUnit.All in automation-with-tdd.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.TestCreateCompanyPage.executor": "Run",
+    "TestNG.TestDeleteCompanyPage.executor": "Run",
+    "TestNG.TestDeleteCompanyPage.testDeleteCompany.executor": "Run",
+    "TestNG.TestGlobalSettingsPage.executor": "Run",
     "TestNG.TestLogInPage.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/apple/Documents/workspace/connectsecure_automation"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.All in automation-with-tdd (2)">
+    <configuration name="All in automation-with-tdd (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="automation-with-tdd" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in automation-with-tdd (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="automation-with-tdd" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in automation-with-tdd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="automation-with-tdd" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="connectsecure_automation" />
       <method v="2">
@@ -65,7 +111,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestLogInPage" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestDeleteCompanyPage" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="automation-with-tdd" />
       <extension name="coverage">
         <pattern>
@@ -74,7 +120,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.connectsecure.test.ui.connectsecure" />
-      <option name="MAIN_CLASS_NAME" value="com.connectsecure.test.ui.connectsecure.TestLogInPage" />
+      <option name="MAIN_CLASS_NAME" value="com.connectsecure.test.ui.connectsecure.TestDeleteCompanyPage" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestGlobalSettingsPage" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="automation-with-tdd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.connectsecure.test.ui.connectsecure.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.connectsecure.test.ui.connectsecure" />
+      <option name="MAIN_CLASS_NAME" value="com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -84,7 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.TestLogInPage" />
+        <item itemvalue="JUnit.All in automation-with-tdd (2)" />
+        <item itemvalue="JUnit.All in automation-with-tdd (1)" />
+        <item itemvalue="JUnit.All in automation-with-tdd" />
+        <item itemvalue="TestNG.TestGlobalSettingsPage" />
+        <item itemvalue="TestNG.TestDeleteCompanyPage" />
       </list>
     </recent_temporary>
   </component>

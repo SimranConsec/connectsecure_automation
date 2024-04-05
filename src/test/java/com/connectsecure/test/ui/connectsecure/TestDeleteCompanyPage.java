@@ -51,15 +51,16 @@ public class TestDeleteCompanyPage {
   }
 
   @Test(priority = 5, enabled = true)
-  public void testDeleteCompany() {
-    String nameOfCompany = Utilities.getEnvironmentProperties("nameOfCompany");
-    deleteCompanyHelper.clickOnlabelCompany();
+  public void testDeleteCompany() throws InterruptedException {
+    String deleteCompany = Utilities.getEnvironmentProperties("deleteCompany");
+    deleteCompanyHelper.clickOnLabelCompany();
     deleteCompanyHelper.clickOnDeleteCompanies();
-    deleteCompanyHelper.clickOnSelectCompanytoDelete();
-    deleteCompanyHelper.enterCompanyNameToDelete(nameOfCompany);
-    deleteCompanyHelper.clickOnSearchedCompany(nameOfCompany);
+    deleteCompanyHelper.clickOnSelectCompanyToDelete();
+    deleteCompanyHelper.enterCompanyNameToDelete(deleteCompany);
+    deleteCompanyHelper.clickOnSearchedCompany(deleteCompany);
     deleteCompanyHelper.clickOnDeleteButton();
     deleteCompanyHelper.clickOnDeleteButtonToConfirm();
+    TimeUnit.SECONDS.sleep(5);
     LogPrinter.printLog("Selected company deleted successfully.");
   }
 }

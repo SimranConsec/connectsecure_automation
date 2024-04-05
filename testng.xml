@@ -9,11 +9,11 @@
 	<test name="ReqRes Test Suit">
 		<classes>
 			 <class name="com.connectsecure.test.ui.connectsecure.TestLogInPage" />
-			     <!-- <class name="com.connectsecure.test.ui.connectsecure.TestGenralSettingsPage" />
+			     <class name="com.connectsecure.test.ui.connectsecure.TestGenralSettingsPage" />
 			     <class name="com.connectsecure.test.ui.connectsecure.TestCreateCompanyPage" /> 
 			     <class name="com.connectsecure.test.ui.connectsecure.TestDeleteCompanyPage" /> 
 			     <class name="com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage" /> 
-			     <class name="com.connectsecure.test.ui.connectsecure.TestTagRulePage" /> -->
+			     <class name="com.connectsecure.test.ui.connectsecure.TestTagRulePage" />
 
 		</classes>
 
