@@ -50,9 +50,9 @@ public abstract class WebDriverFactory {
           ChromeOptions options = new ChromeOptions();
           options.addArguments("--headless");
           options.setBinary(path + "/drivers/chromedriver.exe"); 
-          options.add_argument('--disable-dev-shm-usage')
-          options.add_argument('--ignore-ssl-errors=yes')
-          options.add_argument('--ignore-certificate-errors')
+          options.addArguments("--disable-dev-shm-usage");
+          options.addArguments("--ignore-ssl-errors=yes");
+          options.addArguments("--ignore-certificate-errors");
           setDriver(new ChromeDriver());
         }
         break;
