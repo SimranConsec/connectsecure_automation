@@ -39,7 +39,7 @@ jobs:
         uses: browser-actions/setup-firefox@latest
 
       - name: Build the Project
-        run: mvn clean test
+        run: mvn clean install -DskipTests
 
       - name: Upload target folder
         uses: actions/upload-artifact@v2
@@ -50,7 +50,7 @@ jobs:
             ${{ github.workspace }}/reports
 
   code_analysis:
-    name: Code Analysis
+    name: Test Execution and Code Analysis
     needs:
       - build_and_test
 
@@ -68,12 +68,6 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
           cache: maven
-
-      - name: Install Chrome
-        uses: browser-actions/setup-chrome@latest
-
-      - name: Install Firefox
-        uses: browser-actions/setup-firefox@latest
 
       - name: Cache SonarCloud packages
         uses: actions/cache@v2

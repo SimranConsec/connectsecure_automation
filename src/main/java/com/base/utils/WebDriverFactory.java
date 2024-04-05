@@ -18,6 +18,7 @@ import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -44,9 +45,11 @@ public abstract class WebDriverFactory {
     path = System.getProperty("user.dir");
     switch (bwoserNameString.toUpperCase()) {
       case "CHROME":
-        System.setProperty("webdriver.chrome.driver", path + "/drivers/chromedriver");
+        // System.setProperty("webdriver.chrome.driver", path + "/drivers/chromedriver.exe");
         if (getDriver() == null) {
-          setDriver(new ChromeDriver());
+          ChromeOptions options = new ChromeOptions();
+          options.addArguments("--headless");
+          setDriver(new ChromeDriver(options));
         }
         break;
       case "FIREFOX":
