@@ -18,7 +18,7 @@ public class GlobalSettingHelper {
 
   /**
    * TimeZone Setting.
-   * 
+   *
    * @author apple
    */
 
@@ -180,7 +180,6 @@ public class GlobalSettingHelper {
    * Deprecation days setting(You can still use this, but don't count on it, because we will.
    * probably replace it with something else (or remove it entirely) in future software releases."
    * update days as per need,if not needed then leave it as set previously.
-   * 
    */
 
   @FindBy(xpath = "//div[@id='deprecation']")

@@ -19,7 +19,7 @@ public class CreateCompanyHelper {
 
   /**
    * Launch the Web Application and navigate to the Company Label.
-   * 
+   *
    * @author apple
    */
 
