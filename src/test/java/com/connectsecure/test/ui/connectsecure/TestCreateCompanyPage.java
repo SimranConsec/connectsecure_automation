@@ -34,7 +34,7 @@ public class TestCreateCompanyPage {
   }
 
   @Test(priority = 2, enabled = true)
-  public void testLogIn() throws InterruptedException {
+  public void testLogInIsWorkingFine() throws InterruptedException {
     String tenantName = Utilities.getEnvironmentProperties("tenantName");
     String loginName = Utilities.getEnvironmentProperties("loginName");
     String password = Utilities.getEnvironmentProperties("password");
@@ -51,7 +51,7 @@ public class TestCreateCompanyPage {
   }
 
   @Test(priority = 3, enabled = true)
-  public void testCreateCompany() throws InterruptedException {
+  public void testCreateCompanyFeatureIsWorking() throws InterruptedException {
     String nameOfCompany = Utilities.getEnvironmentProperties("nameOfCompany");
     String descriptionOfCompany = Utilities.getEnvironmentProperties("descriptionOfCompany");
     String city = Utilities.getEnvironmentProperties("city");
@@ -69,6 +69,6 @@ public class TestCreateCompanyPage {
     createCompanyHelper.clickOnSaveButton();
     TimeUnit.SECONDS.sleep(5);
     Assert.assertTrue(createCompanyHelper.isCreatedCompanyNameDisplayed(nameOfCompany));
-    LogPrinter.printLog("Company created successfully and checked also.");
+    LogPrinter.printLog("Company created successfully.");
   }
 }
