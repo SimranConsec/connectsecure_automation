@@ -69,6 +69,6 @@ public class TestCreateCompanyPage {
     createCompanyHelper.clickOnSaveButton();
     TimeUnit.SECONDS.sleep(5);
     Assert.assertTrue(createCompanyHelper.isCreatedCompanyNameDisplayed(nameOfCompany));
-    LogPrinter.printLog("Company created successfully.");
+    LogPrinter.printLog("Company created successfully and create company feature is working fine.");
   }
 }
