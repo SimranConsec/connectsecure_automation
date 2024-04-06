@@ -1,0 +1,7 @@
+.target/
+*.exe
+*.classpath
+*.pmd
+*.project
+*.settings
+*.DS_Store
