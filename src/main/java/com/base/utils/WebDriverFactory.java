@@ -45,11 +45,17 @@ public abstract class WebDriverFactory {
     path = System.getProperty("user.dir");
     switch (bwoserNameString.toUpperCase()) {
       case "CHROME":
-        // System.setProperty("webdriver.chrome.driver", path + "/drivers/chromedriver.exe");
-        if (getDriver() == null) {
+        boolean headless = Boolean.parseBoolean(Utilities.getEnvironmentProperties("browser"));
+        if(headless) {
           ChromeOptions options = new ChromeOptions();
           options.addArguments("--headless");
           setDriver(new ChromeDriver(options));
+      }
+
+        System.setProperty("webdriver.chrome.driver", path + "/drivers/chromedriver");
+        if (getDriver() == null) {
+
+          setDriver(new ChromeDriver());
         }
         break;
       case "FIREFOX":
@@ -150,6 +156,7 @@ public abstract class WebDriverFactory {
    */
   public static void clickWebElement(WebElement element) {
     isElementVisible(element, 20);
+    isElementClickable(element,30);
     if (!element.isEnabled()) {
       throw new WebDriverException(element.getText() + " is not clickable");
     }

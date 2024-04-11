@@ -2,7 +2,6 @@ package com.base.helper.ui.connectsecure;
 
 import com.base.utils.WebDriverFactory;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -19,7 +18,8 @@ public class DeleteCompanyHelper {
   }
 
   /**
-   * Test delete company.
+   * first create company and then delete the created company to verify that whether company deleted
+   * or not.
    */
 
   @FindBy(xpath = "//span[contains(text(),'Companies')]")
@@ -52,13 +52,13 @@ public class DeleteCompanyHelper {
     WebDriverFactory.clickWebElement(clickOnSelectCompany);
   }
 
-  public void enterCompanyNameToDelete(String deleteCompany) {
-    WebDriverFactory.sendKeys(txtboxSearchCompany, deleteCompany, 5);
+  public void enterCompanyNameToDelete(String companyName) {
+    WebDriverFactory.sendKeys(txtboxSearchCompany, companyName, 5);
   }
 
-  public void clickOnSearchedCompany(String deleteCompany) {
+  public void clickOnSearchedCompany(String companyName) {
     WebDriverFactory.getDriver()
-        .findElement(By.xpath("//span[contains(text(),'" + deleteCompany + "')]")).click();
+        .findElement(By.xpath("//span[contains(text(),'" + companyName + "')]")).click();
   }
 
   public void clickOnDeleteButton() {
@@ -67,18 +67,31 @@ public class DeleteCompanyHelper {
 
   public void clickOnDeleteButtonToConfirm() {
     WebDriverFactory.clickWebElement(btnConfirmDelete, 10);
+    WebDriverFactory.waitForPageToLoad(10);
   }
 
   /**
-   * For checking that company deleted or not.
+   * Going back to the dashboard level to delete company. Steps include that go to search bar and
+   * goto Global dashboard and then delete your company.
    */
 
-  /*public void getPopUpMessage() {
-    if (popup.isDisplayed()) {
-      // Handle the popup or assert its content
-      System.out.println("Popup appeared.");
-    } else {
-      System.out.println("Popup did not appear.");
-    }
-  }*/
+  @FindBy(xpath = "//mat-select[@id='sSearchCompanyInput']")
+  private WebElement boxSearchCompanyInput;
+
+  @FindBy(xpath = "//input[@placeholder='Search Company']")
+  private WebElement txtboxEnterCompanyInput;
+
+  @FindBy(xpath = "//mat-option/span[contains(text(),'Global')]")
+  private WebElement optGlobal;
+
+  public void clickOnSearchCompanyInput(String companyInput) {
+    WebDriverFactory.clickWebElement(boxSearchCompanyInput);
+    WebDriverFactory.sendKeys(txtboxEnterCompanyInput, companyInput, 10);
+    WebDriverFactory.clickWebElement(optGlobal, 10);
+  }
+
+  public boolean isNoMatchingFoundDisplayed() {
+    return WebDriverFactory.getDriver()
+        .findElement(By.xpath("//div[contains(text(),'No matching found')]")).isDisplayed();
+  }
 }

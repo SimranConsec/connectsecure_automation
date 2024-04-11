@@ -2,10 +2,13 @@ package com.base.helper.ui.connectsecure;
 
 import com.base.utils.WebDriverFactory;
 
+import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Wait;
 
 public class TagRuleHelper {
 
@@ -65,14 +68,12 @@ public class TagRuleHelper {
   @FindBy(xpath = "//span[@id='Edit']")
   private WebElement btnActionEdit;
 
-  @FindBy(xpath = "//mat-toolbar/div[2]/div/form/mat-form-field")
+  @FindBy(xpath = "//input[@id='tags_filter_sub']")
   private WebElement txtboxSearch;
-
-  @FindBy(xpath = "//span[contains(text(),'DemoTag')]")
-  private WebElement txtCreatedTag;
 
   public void clickOnLabelTags() {
     WebDriverFactory.clickWebElement(lblTagSettings);
+    WebDriverFactory.waitForPageToLoad(10);
   }
 
   public void clickOnButtonAddTagRules() {
@@ -100,44 +101,83 @@ public class TagRuleHelper {
 
   public void enterTagDescription(String tagDescription) {
     WebDriverFactory.sendKeys(txtboxDescription, tagDescription);
+    txtboxDescription.sendKeys(Keys.TAB);
   }
 
-  /*public void clickOnRulesField(String fieldvalue) {
-    WebDriverFactory.clickWebElement(boxSelectField);
-    WebDriverFactory.selectElementByVisibleText();
-    WebDriverFactory.getDriver().findElement(By.xpath("//option[contains(text(),'Starts With ')]"))
-        .click();
-    WebDriverFactory.sendKeys(txtboxEnterValue, fieldvalue);
-  }*/
+  @FindBy(xpath = "//div[@id='e-dropdown-btn_1-popup']")
+  private WebElement dropdown;
+
+  public void clickOnRulesField(String fieldValue, String dropValue) {
+    WebDriverFactory.clickWebElement(boxSelectField, 5);
+    WebDriverFactory.selectElementByVisibleText(dropdown, dropValue);
+    WebDriverFactory.sendKeys(txtboxEnterValue, fieldValue);
+  }
 
   public void enterTagDetails(String tagName, String tagValue) {
     WebDriverFactory.sendKeys(txtboxTagName, tagName);
     WebDriverFactory.sendKeys(txtboxTagValue, tagValue);
     WebDriverFactory.clickWebElement(btnAdd, 5);
+    btnAdd.sendKeys(Keys.TAB);
   }
 
   public void clickOnSaveButton() {
     WebDriverFactory.clickWebElement(btnSave);
+    WebDriverFactory.waitForAnElementToBeVisible("//div[contains(text(),'Saved successfully!')]",
+        20);
   }
 
+  @FindBy(xpath = "//div[contains(text(),'Items per page:')]")
+  private WebElement lblPage;
+
   public boolean isCreatedTagNameDisplayed(String ruleName) {
-    WebDriverFactory.sendKeys(txtboxSearch, ruleName, 5);
-    return WebDriverFactory.isElementVisible(txtCreatedTag, 5);
+    WebDriverFactory.refresh();
+    WebDriverFactory.waitForAnElementToBeVisible(lblTagSettings, 20);
+    WebDriverFactory.clickWebElement(lblTagSettings);
+    WebDriverFactory.sendKeys(txtboxSearch, ruleName, 10);
+    WebDriverFactory.waitForAnElementToBeVisible("//span[contains(text(),'\" + ruleName + \"')]",
+        10);
+    return WebDriverFactory.getDriver()
+        .findElement(By.xpath("//span[contains(text(),'" + ruleName + "')]")).isDisplayed();
   }
 
   /**
    * Tag action checking.
    */
-  public void clickOnTagActionDeleteButton(String tagIndex) {
+  public void clickOnTagActionDeleteButton(String ruleName)
+      throws InterruptedException {
+    TimeUnit.SECONDS.sleep(3);
+    WebDriverFactory.sendKeys(txtboxSearch, ruleName);
+    TimeUnit.SECONDS.sleep(3);
+    WebDriverFactory.waitForAnElementToBeVisible("//span[contains(text(),'" + ruleName + "')]",
+        10);
     WebDriverFactory.getDriver()
-        .findElement(By.xpath("//tr[" + tagIndex + "]/td[5]/button[@id='btntags']")).click();
-    WebDriverFactory.clickWebElement(btnActionDelete);
-    WebDriverFactory.clickWebElement(btnYes, 5);
+        .findElement(By.xpath("//tr[1]/td[5]/button[@id='btntags']")).click();
   }
 
-  public void clickOnTagActionEditButton(String tagIndex1) {
+  public void clickOnButtonDelete() {
+    WebDriverFactory.clickWebElement(btnActionDelete);
+    WebDriverFactory.clickWebElement(btnYes);
+
+  }
+
+  public boolean isRemovedMessageDisplayed() {
+    WebDriverFactory.waitForAnElementToBeVisible("//div[contains(text(),'Removed successfully')]",
+        20);
+    return WebDriverFactory.getDriver()
+        .findElement(By.xpath("//div[contains(text(),'Removed successfully')]")).isDisplayed();
+  }
+
+  /**
+   * Testing the tag edit button of exciting company.
+   *
+   * @throws InterruptedException
+   */
+  public void clickOnTagActionEditButton(String ruleName) throws InterruptedException {
+    TimeUnit.SECONDS.sleep(3);
+    WebDriverFactory.sendKeys(txtboxSearch, ruleName);
+    TimeUnit.SECONDS.sleep(3);
     WebDriverFactory.getDriver()
-        .findElement(By.xpath("//tr[" + tagIndex1 + "]/td[5]/button[@id='btntags']")).click();
+        .findElement(By.xpath("//tr[1]/td[5]/button[@id='btntags']")).click();
     WebDriverFactory.clickWebElement(btnActionEdit);
   }
 
@@ -145,6 +185,17 @@ public class TagRuleHelper {
     txtboxname.click();
     txtboxname.clear();
     WebDriverFactory.sendKeys(txtboxname, updateName);
+    txtboxname.sendKeys(Keys.TAB);
+  }
+
+  public void clickOnButtonSaveUpdate() {
     WebDriverFactory.clickWebElement(btnSave, 10);
+  }
+
+  public boolean isSavedSuccessfullyMessageDisplayed() {
+    WebDriverFactory.waitForAnElementToBeVisible("//div[contains(text(),'Saved successfully')]",
+        20);
+    return WebDriverFactory.getDriver()
+        .findElement(By.xpath("//div[contains(text(),'Saved successfully')]")).isDisplayed();
   }
 }

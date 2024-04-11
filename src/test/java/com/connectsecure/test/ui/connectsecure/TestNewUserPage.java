@@ -19,13 +19,13 @@ public class TestNewUserPage {
   CreateNewUserHelper createNewUserHelper;
 
   @BeforeMethod
-  public void beforeMethod() {
-    WebDriverFactory.launchBrowser();
-    WebDriverFactory.openApplication();
-    WebDriverFactory.waitForPageToLoad(30);
-
+  public void beforeMethod() throws InterruptedException {
     loginPageHelper = new LoginPageHelper();
     createNewUserHelper = new CreateNewUserHelper();
+    String tenantName = Utilities.getEnvironmentProperties("tenantName");
+    String loginName = Utilities.getEnvironmentProperties("loginName");
+    String password = Utilities.getEnvironmentProperties("password");
+    loginPageHelper.loginIntoTheApplication(tenantName, loginName, password);
   }
 
   @AfterClass
@@ -33,25 +33,8 @@ public class TestNewUserPage {
     WebDriverFactory.closeWindow();
   }
 
-  @Test(priority = 27, enabled = true)
-  public void testLogIn() throws InterruptedException {
-    String tenantName = Utilities.getEnvironmentProperties("tenantName");
-    String loginName = Utilities.getEnvironmentProperties("loginName");
-    String password = Utilities.getEnvironmentProperties("password");
-    loginPageHelper.enterTenantName(tenantName);
-    loginPageHelper.clickOnSignIn();
-    TimeUnit.SECONDS.sleep(5);
-    loginPageHelper.enterLoginName(loginName);
-    loginPageHelper.clickOnNextButton();
-    loginPageHelper.enterPassword(password);
-    loginPageHelper.clickOnNext();
-    TimeUnit.SECONDS.sleep(10);
-    Assert.assertTrue(loginPageHelper.isConsecureLogoDisplayed());
-    LogPrinter.printLog("Logged in to the application successfully.");
-  }
-
   //For Allowed companies.
-  @Test(priority = 28, enabled = false)
+  @Test(priority = 0, enabled = true)
   public void testAddNewUserRecordForAllowedCompany() throws InterruptedException {
     String firstName = Utilities.getEnvironmentProperties("firstName");
     String lastName = Utilities.getEnvironmentProperties("lastName");
@@ -76,7 +59,7 @@ public class TestNewUserPage {
         "User created successfully and an email sent to the respective mail for the verification with a code.");
   }
 
-  @Test(priority = 29, enabled = false)
+  @Test(priority = 0, enabled = true)
   public void testAddNewUserRecordForDeniedCompany() throws InterruptedException {
     String firstName = Utilities.getEnvironmentProperties("firstName");
     String lastName = Utilities.getEnvironmentProperties("lastName");
@@ -99,7 +82,7 @@ public class TestNewUserPage {
         "User created successfully and an email sent to the respective mail for the verification with a code.");
   }
 
-  @Test(priority = 30, enabled = false)
+  @Test(priority = 0, enabled = true)
   public void testActionUserButton() {
     String email = Utilities.getEnvironmentProperties("email");
     String role1 = Utilities.getEnvironmentProperties("role1");
@@ -114,7 +97,7 @@ public class TestNewUserPage {
     LogPrinter.printLog("Edited.");
   }
 
-  @Test(priority = 31,enabled = true)
+  @Test(priority = 0,enabled = true)
   public void testUserActionMfa(){
     String email= Utilities.getEnvironmentProperties("email");
     createNewUserHelper.clickOnLabelUsers();

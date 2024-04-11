@@ -18,35 +18,23 @@ public class TestGlobalSettingsPage {
   GlobalSettingHelper globalSettingHelper;
 
   @BeforeMethod
-  public void beforeMethod() {
+  public void beforeMethod() throws InterruptedException {
     WebDriverFactory.launchBrowser();
     WebDriverFactory.openApplication();
     WebDriverFactory.waitForPageToLoad(30);
 
     loginPageHelper = new LoginPageHelper();
     globalSettingHelper = new GlobalSettingHelper();
+
+    String tenantName = Utilities.getEnvironmentProperties("tenantName");
+    String loginName = Utilities.getEnvironmentProperties("loginName");
+    String password = Utilities.getEnvironmentProperties("password");
+    loginPageHelper.loginIntoTheApplication(tenantName, loginName, password);
   }
 
   @AfterClass
   public void afterMethod() {
     WebDriverFactory.closeWindow();
-  }
-
-  @Test(priority = 9, enabled = true)
-  public void testLogIn() throws InterruptedException {
-    String tenantName = Utilities.getEnvironmentProperties("tenantName");
-    String loginName = Utilities.getEnvironmentProperties("loginName");
-    String password = Utilities.getEnvironmentProperties("password");
-    loginPageHelper.enterTenantName(tenantName);
-    loginPageHelper.clickOnSignIn();
-    TimeUnit.SECONDS.sleep(5);
-    loginPageHelper.enterLoginName(loginName);
-    loginPageHelper.clickOnNextButton();
-    loginPageHelper.enterPassword(password);
-    loginPageHelper.clickOnNext();
-    TimeUnit.SECONDS.sleep(10);
-    Assert.assertTrue(loginPageHelper.isConsecureLogoDisplayed());
-    LogPrinter.printLog("Logged in to the application successfully.");
   }
 
   @Test(priority = 10, enabled = true)

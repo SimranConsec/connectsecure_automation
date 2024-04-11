@@ -3,6 +3,7 @@ package com.base.helper.ui.connectsecure;
 import com.base.utils.WebDriverFactory;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -72,6 +73,7 @@ public class CreateCompanyHelper {
 
   public void enterStateOfCompany(String state) {
     WebDriverFactory.sendKeys(txtboxState, state);
+    txtboxState.sendKeys(Keys.TAB);
   }
 
   public void enterCountryOfCompany(String country) {
@@ -86,9 +88,10 @@ public class CreateCompanyHelper {
     WebDriverFactory.clickWebElement(btnSave);
   }
 
-  public boolean isCreatedCompanyNameDisplayed(String nameOfCompany) {
+  public String getCreatedCompanyName(String companyName) {
+    WebDriverFactory.waitForAnElementToBeVisible(
+        "//div/span[contains(text(),'" + companyName + "')]", 10);
     return WebDriverFactory.getDriver()
-        .findElement(By.xpath("//div/span[contains(text(),'" + nameOfCompany + "')]"))
-        .isDisplayed();
+        .findElement(By.xpath("//div/span[contains(text(),'" + companyName + "')]")).getText();
   }
 }

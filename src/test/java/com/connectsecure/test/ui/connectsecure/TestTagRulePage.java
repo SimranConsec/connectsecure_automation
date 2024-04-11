@@ -1,6 +1,7 @@
 package com.connectsecure.test.ui.connectsecure;
 
 import com.base.utils.Utilities;
+import com.base.utils.timeutils.TimeUtil;
 import java.util.concurrent.TimeUnit;
 
 import org.testng.Assert;
@@ -18,8 +19,6 @@ public class TestTagRulePage {
   LoginPageHelper loginPageHelper;
   TagRuleHelper tagRuleHelper;
 
-  String updateName = "TagDemo";
-
   @BeforeMethod
   public void beforeMethod() {
     WebDriverFactory.launchBrowser();
@@ -28,6 +27,10 @@ public class TestTagRulePage {
 
     loginPageHelper = new LoginPageHelper();
     tagRuleHelper = new TagRuleHelper();
+    String tenantName = Utilities.getEnvironmentProperties("tenantName");
+    String loginName = Utilities.getEnvironmentProperties("loginName");
+    String password = Utilities.getEnvironmentProperties("password");
+    loginPageHelper.loginIntoTheApplication(tenantName, loginName, password);
   }
 
   @AfterClass
@@ -35,26 +38,32 @@ public class TestTagRulePage {
     WebDriverFactory.closeWindow();
   }
 
-  @Test(priority = 23, enabled = true)
-  public void testLogIn() throws InterruptedException {
-    String tenantName = Utilities.getEnvironmentProperties("tenantName");
-    String loginName = Utilities.getEnvironmentProperties("loginName");
-    String password = Utilities.getEnvironmentProperties("password");
-    loginPageHelper.enterTenantName(tenantName);
-    loginPageHelper.clickOnSignIn();
-    TimeUnit.SECONDS.sleep(5);
-    loginPageHelper.enterLoginName(loginName);
-    loginPageHelper.clickOnNextButton();
-    loginPageHelper.enterPassword(password);
-    loginPageHelper.clickOnNext();
-    TimeUnit.SECONDS.sleep(10);
-    Assert.assertTrue(loginPageHelper.isConsecureLogoDisplayed());
-    LogPrinter.printLog("Logged in to the application successfully.");
+  @Test(priority = 0, enabled = true)
+  public void testAddTagRuleIsWorkingFine() throws InterruptedException {
+    String ruleName = "Tag" + TimeUtil.getCurrentTime();
+    String riskScore = Utilities.getEnvironmentProperties("riskScore");
+    String collectionTypes = Utilities.getEnvironmentProperties("collectionTypes");
+    String tagDescription = Utilities.getEnvironmentProperties("tagDescription");
+    String tagName = Utilities.getEnvironmentProperties("tagName");
+    String tagValue = Utilities.getEnvironmentProperties("tagValue");
+    String fieldValue = Utilities.getEnvironmentProperties("fieldValue");
+    String dropValue = Utilities.getEnvironmentProperties("dropValue");
+    tagRuleHelper.clickOnLabelTags();
+    tagRuleHelper.clickOnButtonAddTagRules();
+    tagRuleHelper.enterTagRuleName(ruleName);
+    tagRuleHelper.enterTagRiskScore(riskScore);
+    tagRuleHelper.clickOnCollectionBox();
+    tagRuleHelper.selectCollectionType(collectionTypes);
+    tagRuleHelper.enterTagDescription(tagDescription);
+    tagRuleHelper.enterTagDetails(tagName, tagValue);
+    tagRuleHelper.clickOnSaveButton();
+    Assert.assertTrue(tagRuleHelper.isCreatedTagNameDisplayed(ruleName));
+    LogPrinter.printLog("Tag is created and verified also.");
   }
 
-  @Test(priority = 24, enabled = true)
-  public void testAddTagRule() throws InterruptedException {
-    String ruleName = Utilities.getEnvironmentProperties("ruleName");
+  @Test(priority = 0, enabled = true)
+  public void testTagActionDelete() throws InterruptedException {
+    String ruleName = "New" + TimeUtil.getCurrentTime();
     String riskScore = Utilities.getEnvironmentProperties("riskScore");
     String collectionTypes = Utilities.getEnvironmentProperties("collectionTypes");
     String tagDescription = Utilities.getEnvironmentProperties("tagDescription");
@@ -69,27 +78,25 @@ public class TestTagRulePage {
     tagRuleHelper.enterTagDescription(tagDescription);
     tagRuleHelper.enterTagDetails(tagName, tagValue);
     tagRuleHelper.clickOnSaveButton();
-    TimeUnit.SECONDS.sleep(5);
     Assert.assertTrue(tagRuleHelper.isCreatedTagNameDisplayed(ruleName));
-    LogPrinter.printLog("Created tag displayed and saved successfully.");
-  }
-
-  @Test(priority = 25, enabled = true)
-  public void testTagActionDelete() throws InterruptedException {
-    String tagIndex = Utilities.getEnvironmentProperties("tagIndex");
+    LogPrinter.printLog("Tag created successfully.");
     tagRuleHelper.clickOnLabelTags();
-    TimeUnit.SECONDS.sleep(5);
-    tagRuleHelper.clickOnTagActionDeleteButton(tagIndex);
+    tagRuleHelper.clickOnTagActionDeleteButton(ruleName);
+    tagRuleHelper.clickOnButtonDelete();
+    Assert.assertTrue(tagRuleHelper.isRemovedMessageDisplayed());
     LogPrinter.printLog("Tag action delete executed successfully.");
   }
 
-  @Test(priority = 26, enabled = true)
+  @Test(priority = 0, enabled = true)
   public void testTagActionEdit() throws InterruptedException {
-    String tagIndex1 = Utilities.getEnvironmentProperties("tagIndex1");
+    String companyName = Utilities.getEnvironmentProperties("companyName");
+    String updateName = "Updated" + TimeUtil.getCurrentTime();
     tagRuleHelper.clickOnLabelTags();
-    TimeUnit.SECONDS.sleep(5);
-    tagRuleHelper.clickOnTagActionEditButton(tagIndex1);
+    WebDriverFactory.waitForPageToLoad(10);
+    tagRuleHelper.clickOnTagActionEditButton(companyName);
     tagRuleHelper.enterUpdateForTagRule(updateName);
-    LogPrinter.printLog("Tag action editted executed successfully.");
+    tagRuleHelper.clickOnButtonSaveUpdate();
+    Assert.assertTrue(tagRuleHelper.isSavedSuccessfullyMessageDisplayed());
+    LogPrinter.printLog("Tag action edited executed successfully.");
   }
 }

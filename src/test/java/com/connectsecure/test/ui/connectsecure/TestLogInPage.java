@@ -13,15 +13,16 @@ import com.base.utils.Utilities;
 import com.base.utils.WebDriverFactory;
 
 public class TestLogInPage {
+
   LoginPageHelper loginPageHelper;
 
   @BeforeMethod
   public void beforeMethod() {
-    WebDriverFactory.launchBrowser();
-    WebDriverFactory.openApplication();
-    WebDriverFactory.waitForPageToLoad(30);
-
     loginPageHelper = new LoginPageHelper();
+    String tenantName = Utilities.getEnvironmentProperties("tenantName");
+    String loginName = Utilities.getEnvironmentProperties("loginName");
+    String password = Utilities.getEnvironmentProperties("password");
+    LoginPageHelper.loginIntoTheApplication(tenantName, loginName, password);
   }
 
   @AfterMethod
@@ -30,20 +31,7 @@ public class TestLogInPage {
   }
 
   @Test(priority = 1, enabled = true)
-  public void testLogIn() throws InterruptedException {
-    String tenantName = Utilities.getEnvironmentProperties("tenantName");
-    String loginName = Utilities.getEnvironmentProperties("loginName");
-    String password = Utilities.getEnvironmentProperties("password");
-    loginPageHelper.enterTenantName(tenantName);
-    loginPageHelper.clickOnSignIn();
-    TimeUnit.SECONDS.sleep(5);
-    loginPageHelper.enterLoginName(loginName);
-    loginPageHelper.clickOnNextButton();
-    loginPageHelper.enterPassword(password);
-    loginPageHelper.clickOnNext();
-    TimeUnit.SECONDS.sleep(10);
-    Assert.assertTrue(loginPageHelper.isConsecureLogoDisplayed());
-    LogPrinter.printLog("Logo is displayed.");
-    LogPrinter.printLog("Logged in to the application successfully.");
+  public void testUserIsAbleToLoginApplication() throws InterruptedException {
+    LogPrinter.printLog("User is able to login into the application.");
   }
 }

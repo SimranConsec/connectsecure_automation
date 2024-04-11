@@ -6,20 +6,19 @@
 		<!-- <listener class-name="com.oneframe.listeners.CustomReporter" /> -->
 	</listeners>
 
-	<test name="ReqRes Test Suit">
-		<classes>
+	<test name="Test ConnectSecure Application">
+<!--		<classes>
 			 <class name="com.connectsecure.test.ui.connectsecure.TestLogInPage" />
 			     <class name="com.connectsecure.test.ui.connectsecure.TestGenralSettingsPage" />
-			     <class name="com.connectsecure.test.ui.connectsecure.TestCreateCompanyPage" /> 
-			     <class name="com.connectsecure.test.ui.connectsecure.TestDeleteCompanyPage" /> 
+			     <class name="com.connectsecure.test.ui.connectsecure.TestCreateCompanyPage" />
 			     <class name="com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage" /> 
 			     <class name="com.connectsecure.test.ui.connectsecure.TestTagRulePage" />
+		</classes>-->
 
-		</classes>
+
+	 /<packages>
+			<package name="com.connectsecure.test.ui.connectsecure.*"/>
+		</packages>
 
 	</test>
-	<!-- /<packages>
-			<package name="com.connectsecure.test.ui.connectsecure"/>
-		</packages>
-		-->
 </suite>

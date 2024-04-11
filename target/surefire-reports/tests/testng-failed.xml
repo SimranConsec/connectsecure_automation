@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="instances" name="Failed suite [tests]" allow-return-values="true" verbose="0">
+  <listeners>
+    <listener class-name="com.base.utils.listeners.TestNgListeners"/>
+    <listener class-name="com.base.utils.reporting.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="1" parallel="instances" name="Test ConnectSecure Application(failed)" verbose="0">
+    <classes>
+      <class name="com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage">
+        <methods>
+          <include name="testComplianceScanSettings"/>
+          <include name="testAddEdrApplicationSetting"/>
+          <include name="testSessionTimeoutSetting"/>
+          <include name="testWhiteLabelSetting"/>
+          <include name="testCustomDateFormatSetting"/>
+          <include name="beforeMethod"/>
+          <include name="testEdrExcludeSetting"/>
+          <include name="testBackupExcludeSetting"/>
+          <include name="testPortsPolicySetting"/>
+          <include name="testAddSoftwareToExcludeAndRemove"/>
+          <include name="afterMethod"/>
+          <include name="testLwAgentScanSetting"/>
+          <include name="testTimezoneSetting"/>
+          <include name="testDeprecationDaysSetting"/>
+        </methods>
+      </class> <!-- com.connectsecure.test.ui.connectsecure.TestGlobalSettingsPage -->
+      <class name="com.connectsecure.test.ui.connectsecure.TestLogInPage">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="testUserIsAbleToLoginApplication"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.connectsecure.test.ui.connectsecure.TestLogInPage -->
+      <class name="com.connectsecure.test.ui.connectsecure.TestGenralSettingsPage">
+        <methods>
+          <include name="testGeneralSetting"/>
+          <include name="beforeMethod"/>
+          <include name="afterMethod"/>
+          <include name="testToggleToDarkTheme"/>
+        </methods>
+      </class> <!-- com.connectsecure.test.ui.connectsecure.TestGenralSettingsPage -->
+      <class name="com.connectsecure.test.ui.connectsecure.TestNewUserPage">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="testActionUserButton"/>
+          <include name="testAddNewUserRecordForAllowedCompany"/>
+          <include name="testAddNewUserRecordForDeniedCompany"/>
+          <include name="testUserActionMfa"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.connectsecure.test.ui.connectsecure.TestNewUserPage -->
+      <class name="com.connectsecure.test.ui.connectsecure.TestTagRulePage">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="testAddTagRuleIsWorkingFine"/>
+          <include name="testTagActionEdit"/>
+          <include name="afterMethod"/>
+          <include name="testTagActionDelete"/>
+        </methods>
+      </class> <!-- com.connectsecure.test.ui.connectsecure.TestTagRulePage -->
+      <class name="com.connectsecure.test.ui.connectsecure.TestCreateCompanyPage">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="testDeleteCompanyFeatureIsWorkingfine"/>
+          <include name="testCreateCompanyFeatureIsWorking"/>
+          <include name="testDeleteExistingCompanyAndVerify"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.connectsecure.test.ui.connectsecure.TestCreateCompanyPage -->
+    </classes>
+  </test> <!-- Test ConnectSecure Application(failed) -->
+</suite> <!-- Failed suite [tests] -->

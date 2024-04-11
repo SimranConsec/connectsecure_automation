@@ -4,7 +4,7 @@ import com.base.utils.Utilities;
 import java.util.concurrent.TimeUnit;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -18,46 +18,34 @@ public class TestGenralSettingsPage {
   GeneralSettingHelper generalSettingHelper;
 
   @BeforeMethod
-  public void beforeMethod() {
+  public void beforeMethod() throws InterruptedException {
     WebDriverFactory.launchBrowser();
     WebDriverFactory.openApplication();
     WebDriverFactory.waitForPageToLoad(30);
 
     loginPageHelper = new LoginPageHelper();
     generalSettingHelper = new GeneralSettingHelper();
+
+    String tenantName = Utilities.getEnvironmentProperties("tenantName");
+    String loginName = Utilities.getEnvironmentProperties("loginName");
+    String password = Utilities.getEnvironmentProperties("password");
+    loginPageHelper.loginIntoTheApplication(tenantName, loginName, password);
   }
 
-  @AfterClass
+  @AfterMethod
   public void afterMethod() {
     WebDriverFactory.closeWindow();
   }
 
-  @Test(priority = 6, enabled = true)
-  public void testLogIn() throws InterruptedException {
-    String tenantName = Utilities.getEnvironmentProperties("tenantName");
-    String loginName = Utilities.getEnvironmentProperties("loginName");
-    String password = Utilities.getEnvironmentProperties("password");
-    loginPageHelper.enterTenantName(tenantName);
-    loginPageHelper.clickOnSignIn();
-    TimeUnit.SECONDS.sleep(5);
-    loginPageHelper.enterLoginName(loginName);
-    loginPageHelper.clickOnNextButton();
-    loginPageHelper.enterPassword(password);
-    loginPageHelper.clickOnNext();
-    TimeUnit.SECONDS.sleep(10);
-    Assert.assertTrue(loginPageHelper.isConsecureLogoDisplayed());
-    LogPrinter.printLog("Logged in to the application successfully.");
-  }
-
-  @Test(priority = 7, enabled = true)
-  public void testGeneralSetting() {
-    String launguage = Utilities.getEnvironmentProperties("launguage");
+  @Test(priority = 0, enabled = true)
+  public void testGeneralSetting() throws InterruptedException {
+    String language = Utilities.getEnvironmentProperties("language");
     generalSettingHelper.clickOnLaungaugeImage();
-    generalSettingHelper.clickOnLaunguageAsPreffered(launguage);
-    LogPrinter.printLog("Launguage changed successfully.");
+    generalSettingHelper.clickOnLaunguageAsPreffered(language);
+    LogPrinter.printLog("language changed successfully.");
   }
 
-  @Test(priority = 8, enabled = true)
+  @Test(priority = 0, enabled = true)
   public void testToggleToDarkTheme() {
     generalSettingHelper.clickOnToggleButtonForDarkMode();
     LogPrinter.printLog("Toggled to dark-mode.");

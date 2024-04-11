@@ -1,0 +1,7 @@
+com/connectsecure/test/ui/connectsecure/TestGenralSettingsPage.class
+com/connectsecure/test/ui/connectsecure/TestCreateCompanyPage.class
+com/connectsecure/test/ui/connectsecure/TestNewUserPage.class
+com/connectsecure/test/ui/connectsecure/TestLogInPage.class
+com/connectsecure/test/api/reqres/TestReqRes.class
+com/connectsecure/test/ui/connectsecure/TestGlobalSettingsPage.class
+com/connectsecure/test/ui/connectsecure/TestTagRulePage.class

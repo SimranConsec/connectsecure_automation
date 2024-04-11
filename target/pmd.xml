@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.53.0" timestamp="2024-04-09T17:56:31.756">
+<file name="/Users/apple/Documents/workspace/connectsecure_automation/src/main/java/com/base/helper/ui/connectsecure/CreateNewUserHelper.java">
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="37" rule="UnnecessaryImport" ruleset="Code Style" package="com.base.helper.ui.connectsecure" class="CreateNewUserHelper" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'java.util.concurrent.TimeUnit'
+</violation>
+</file>
+<file name="/Users/apple/Documents/workspace/connectsecure_automation/src/main/java/com/base/helper/ui/connectsecure/DeleteCompanyHelper.java">
+<violation beginline="9" endline="9" begincolumn="1" endcolumn="25" rule="UnnecessaryImport" ruleset="Code Style" package="com.base.helper.ui.connectsecure" class="DeleteCompanyHelper" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'org.testng.Assert'
+</violation>
+</file>
+<file name="/Users/apple/Documents/workspace/connectsecure_automation/src/main/java/com/base/helper/ui/connectsecure/LoginPageHelper.java">
+<violation beginline="6" endline="6" begincolumn="1" endcolumn="37" rule="UnnecessaryImport" ruleset="Code Style" package="com.base.helper.ui.connectsecure" class="LoginPageHelper" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'java.util.concurrent.TimeUnit'
+</violation>
+</file>
+<file name="/Users/apple/Documents/workspace/connectsecure_automation/src/main/java/com/base/helper/ui/connectsecure/TagRuleHelper.java">
+<violation beginline="11" endline="11" begincolumn="1" endcolumn="43" rule="UnnecessaryImport" ruleset="Code Style" package="com.base.helper.ui.connectsecure" class="TagRuleHelper" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'org.openqa.selenium.support.ui.Wait'
+</violation>
+</file>
+<file name="/Users/apple/Documents/workspace/connectsecure_automation/src/main/java/com/base/utils/WebDriverFactory.java">
+<violation beginline="21" endline="21" begincolumn="1" endcolumn="48" rule="UnnecessaryImport" ruleset="Code Style" package="com.base.utils" class="WebDriverFactory" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'org.openqa.selenium.chrome.ChromeOptions'
+</violation>
+</file>
+<file name="/Users/apple/Documents/workspace/connectsecure_automation/src/test/java/com/connectsecure/test/ui/connectsecure/TestGenralSettingsPage.java">
+<violation beginline="4" endline="4" begincolumn="1" endcolumn="37" rule="UnnecessaryImport" ruleset="Code Style" package="com.connectsecure.test.ui.connectsecure" class="TestGenralSettingsPage" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'java.util.concurrent.TimeUnit'
+</violation>
+<violation beginline="6" endline="6" begincolumn="1" endcolumn="25" rule="UnnecessaryImport" ruleset="Code Style" package="com.connectsecure.test.ui.connectsecure" class="TestGenralSettingsPage" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'org.testng.Assert'
+</violation>
+</file>
+<file name="/Users/apple/Documents/workspace/connectsecure_automation/src/test/java/com/connectsecure/test/ui/connectsecure/TestGlobalSettingsPage.java">
+<violation beginline="6" endline="6" begincolumn="1" endcolumn="25" rule="UnnecessaryImport" ruleset="Code Style" package="com.connectsecure.test.ui.connectsecure" class="TestGlobalSettingsPage" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'org.testng.Assert'
+</violation>
+</file>
+<file name="/Users/apple/Documents/workspace/connectsecure_automation/src/test/java/com/connectsecure/test/ui/connectsecure/TestLogInPage.java">
+<violation beginline="3" endline="3" begincolumn="1" endcolumn="37" rule="UnnecessaryImport" ruleset="Code Style" package="com.connectsecure.test.ui.connectsecure" class="TestLogInPage" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'java.util.concurrent.TimeUnit'
+</violation>
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="25" rule="UnnecessaryImport" ruleset="Code Style" package="com.connectsecure.test.ui.connectsecure" class="TestLogInPage" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'org.testng.Assert'
+</violation>
+</file>
+<file name="/Users/apple/Documents/workspace/connectsecure_automation/src/test/java/com/connectsecure/test/ui/connectsecure/TestTagRulePage.java">
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="37" rule="UnnecessaryImport" ruleset="Code Style" package="com.connectsecure.test.ui.connectsecure" class="TestTagRulePage" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'java.util.concurrent.TimeUnit'
+</violation>
+<violation beginline="49" endline="49" begincolumn="12" endcolumn="21" rule="UnusedLocalVariable" ruleset="Best Practices" package="com.connectsecure.test.ui.connectsecure" class="TestTagRulePage" method="testAddTagRuleIsWorkingFine" variable="fieldValue" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_bestpractices.html#unusedlocalvariable" priority="3">
+Avoid unused local variables such as 'fieldValue'.
+</violation>
+<violation beginline="50" endline="50" begincolumn="12" endcolumn="20" rule="UnusedLocalVariable" ruleset="Best Practices" package="com.connectsecure.test.ui.connectsecure" class="TestTagRulePage" method="testAddTagRuleIsWorkingFine" variable="dropValue" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_bestpractices.html#unusedlocalvariable" priority="3">
+Avoid unused local variables such as 'dropValue'.
+</violation>
+</file>
+</pmd>
